@@ -1,0 +1,26 @@
+[
+	{
+		"name": "Intro",
+		"content": "",
+		"bgColor": "grey",
+		"bgImg": "https://gfx.nrk.no/6XDJ5oJM21Uvp1nTsXelqQniwUA5I-kTpxVJdLt0Ij4g"
+	},
+	{
+		"name": "Slide two",
+		"content": "<h1>SOME betyr Sosiale Medier</h1><p>Her er det noe du ikke visste</p>",
+		"bgColor": "",
+		"bgImg": ""
+	},
+	{
+		"name": "Slide three",
+		"content": "<h2>So anyways... 3</h2>",
+		"bgColor": "grey",
+		"bgImg": "https://gfx.nrk.no/RfOJOuP0WHOud57QvpbB0Qa28aTVkHnBIaXBIJ0iJ4MQ"
+	},
+	{
+		"name": "Slide four",
+		"content": "",
+		"bgColor": "grey",
+		"bgImg": "https://gfx.nrk.no/Dep4jmee_IWHNFy8Ln_eig2bKQCfFl7HTkuc-Om9vQ3A"
+	}
+]

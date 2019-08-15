@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+
+	<body>
+		<div id="app">
+			<div id="slides" v-if="slides.length">
+				<div
+					class="sliderail"
+					:style="{transform: `translateX(${ slidePosition * -100 }%)`, transition: railTransition}"
+				>
+					<div
+						class="slide"
+						v-for="(slide, slideIndex) in slides"
+						:style="{left: `${slideIndex * 100}%`, backgroundImage: `url('${slide.bgImg}')`, backgroundColor: slide.bgColor}"
+					>
+						<div class="content" v-html="slide.content"></div>
+					</div>
+				</div>
+
+				<div class="slide-buttons">
+					<button class="decrement" @click="decrement">
+						<span>◂</span>
+					</button>
+					<button class="increment" @click="increment">
+						<span>▸</span>
+					</button>
+				</div>
+
+				<div class="progress">
+					<button
+						class="progressSlide"
+						v-for="(progressSlide, progressSlideIndex) in slides"
+						@click="slidePosition = progressSlideIndex"
+						:class="{active: slidePosition == progressSlideIndex}"
+					>
+						<span class="name">{{ progressSlide.name }}</span>
+						<span class="circle">
+							<span class="dot"></span>
+						</span>
+					</button>
+				</div>
+			</div>
+			<div v-else id="fileinput">
+				<input type="file" @change="fileInput" />
+			</div>
+		</div>
+
+		<script src="https://vuejs.org/js/vue.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>
